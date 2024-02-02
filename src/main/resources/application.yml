@@ -1,0 +1,33 @@
+spring:
+  data:
+    mongodb:
+      database: ghisthub
+      host: 127.0.0.1
+      port: 27017
+      auto-index-creation: true
+  main:
+    allow-bean-definition-overriding: true
+
+logging:
+  level:
+    web: debug
+server:
+  port: 5009
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env, beans"
+
+jwt:
+  secret: "i-wish-i-can-fly-and-touch-the-sky-if-i-no-japa"
+
+application:
+  security:
+    jwt:
+      secret-key: "i-wish-i-can-fly-and-touch-the-sky-if-i-no-japa"
+      expiration: 3000000
+      refresh-token:
+        expiration: 3000000
