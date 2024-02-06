@@ -36,12 +36,18 @@ public class User {
     @Email(message = "please provide a valid email") @NotBlank(message ="user email is required!")
     private String email;
 
+    @NotBlank
+    @Length(max = 120)
+    private String password;
+
     @Builder.Default
     private Role role = Role.USER;
 
     private String address;
 
     private Date passwordChangedAt;
+
+    private Date DOB;
 
     @JsonIgnore
     @Builder.Default
