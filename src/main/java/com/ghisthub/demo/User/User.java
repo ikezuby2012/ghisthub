@@ -60,4 +60,5 @@ public class User {
     @Indexed
     @LastModifiedDate
     private Instant updatedAt;
+
 }

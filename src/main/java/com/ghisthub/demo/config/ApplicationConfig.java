@@ -1,6 +1,8 @@
 package com.ghisthub.demo.config;
 
 import com.ghisthub.demo.User.UserRepository;
+import com.ghisthub.demo.UserDetails.UserDetailsImpl;
+import com.ghisthub.demo.UserDetails.UserDetailsServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,11 +25,13 @@ import java.util.Arrays;
 @RequiredArgsConstructor
 public class ApplicationConfig {
     private final UserRepository repository;
+    private final UserDetailsServiceImpl userDetailsServiceimpl;
 
     @Bean
     public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-        authProvider.setUserDetailsService(userDetailsService());
+//        authProvider.setUserDetailsService(userDetailsService());
+        authProvider.setUserDetailsService(userDetailsServiceimpl);
         authProvider.setPasswordEncoder(passwordEncoder());
         return authProvider;
     }

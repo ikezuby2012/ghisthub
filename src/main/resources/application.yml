@@ -27,7 +27,7 @@ jwt:
 application:
   security:
     jwt:
-      secret-key: "i-wish-i-can-fly-and-touch-the-sky-if-i-no-japa"
+      secret-key: "iwishicanflyandtouchtheskyifinojapaiwishicanflyandtouchtheskyifinojapaiwishicanflyandtouchtheskyifijapaiwishicanflyandtouchjapaiwishicanflyandtouchtheskyifijapaiwishicanflyicanflyandtouchtheskyifinojapaiwishicanflyandtouchtheskyifino"
       expiration: 3000000
       refresh-token:
         expiration: 3000000
